@@ -1,0 +1,230 @@
+﻿body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+/* Toggle Styles */
+
+#viewport {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#content {
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #37474F;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+    #sidebar header {
+        background-color: #263238;
+        font-size: 20px;
+        line-height: 52px;
+        text-align: center;
+    }
+
+        #sidebar header a {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+        }
+
+            #sidebar header a:hover {
+                color: #fff;
+            }
+
+    #sidebar .nav {
+    }
+
+        #sidebar .nav a {
+            background: none;
+            border-bottom: 1px solid #455A64;
+            color: #CFD8DC;
+            font-size: 14px;
+            padding: 16px 24px;
+        }
+
+            #sidebar .nav a:hover {
+                background: none;
+                color: #ECEFF1;
+            }
+
+            #sidebar .nav a i {
+                margin-right: 2px;
+            }
+
+.swrap_one {
+    background-color: #005689;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.swrap_two {
+    color: #005689;
+    display: inline-block !important;
+}
+
+#inputhidden {
+    display: none;
+}
+
+.btnfloatR {
+    float: right;
+    position: relative;
+    right: 3px;
+}
+
+.list > li {
+    background: no-repeat;
+    padding-left: 24px;
+    padding-top: 4px;
+    background-position-y: 6px;
+}
+
+#Logout {
+    float: right;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    display: none
+}
+
+.dangky {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.boardusercomment {
+    margin: 10px 0;
+    border: solid 1px #d6d0c5;
+}
+
+.btn-send {
+    top: 30px;
+    position: relative;
+}
+
+.purchasing-lang {
+    float: right;
+    margin-top: 10px;
+    margin-right: 90px;
+}
+
+.flag-icon {
+    position: relative;
+    display: inline-block;
+    width: 1.33333333em;
+    line-height: 1em;
+    height: 20px;
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flag-icon-vi {
+    background-image: url(/media/images/icon/vietnam.svg);
+}
+
+.flag-icon-kor {
+    background-image: url(/media/images/icon/south-korea.svg)
+}
+
+.purchasing-lang__vn img,
+.purchasing-lang__kor img {
+    max-width: 100%;
+}
+
+.purchasing-lang__vn table,
+.purchasing-lang__kor table {
+    max-width: 100%;
+}
+
+.purchasing-lang__kor {
+    display: none;
+}
+
+.form-report {
+    border: 1px solid #ccc;
+    /*padding: 12px;*/
+}
+
+
+.form-horizontal .form-group {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.form-horizontal .control-label {
+    text-align: left !important;
+}
+
+.fix-width {
+    width: 19% !important;
+}
+
+.fix-width-kor {
+    width: 15% !important;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 420px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 530px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 690px;
+    }
+}
+
+
+@media (min-width:1498px) {
+    .container {
+        width: 1000px;
+    }
+}

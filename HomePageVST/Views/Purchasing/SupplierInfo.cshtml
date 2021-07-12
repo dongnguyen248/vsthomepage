@@ -1,0 +1,123 @@
+﻿@model HomePageVST.Models.SupplierInfoViewModels
+@{
+    ViewBag.Title = "SupplierInfo";
+    Layout = "~/Views/Shared/_Layout_Purchasing.cshtml";
+}
+
+<div class="container">
+
+    <ul>
+        <li class="treeview">
+            <h3 class="swrap_one">
+                Supplier Detail
+            </h3>
+            <ul class="treeview-menu">
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Name Company:
+                    </h4>
+                    <span> @Html.DisplayFor(model => model.Owner.NameCompany)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        Date Of Incorporation :
+                    </h4>
+                    <span>@Html.DisplayFor(model => model.Owner.DayoIncor)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        Representative :
+                    </h4>
+                    <span>  @Html.DisplayFor(model => model.Owner.Representative)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-product-hunt" aria-hidden="true"></i>
+                        Main Product :
+                    </h4>
+                    <span> @Html.DisplayFor(model => model.Owner.MainProduct)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        Main Customer:
+                    </h4>
+                    <span> @Html.DisplayFor(model => model.Owner.MainCustomer)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                        Contact:
+                    </h4>
+                    <span>   @Html.DisplayFor(model => model.Owner.Contact)</span>
+
+                </li>
+
+
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        Download File:
+                    </h4>
+                    @foreach (var item in Model.Owner.SupplierCertificates)
+                    {
+                        <a href="@item.FilePath" target="_blank">@item.FileName | </a>
+                    }
+
+                </li>
+
+                @foreach (var item in Model.Owner.Conversations.OrderBy(x => x.CreatedDate))
+                {
+                    <li>
+                        <h4 class="swrap_two">
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            @item.Sender.SupplierUser.Name (@item.CreatedDate):
+                        </h4>
+                        <span>@item.Content</span>
+
+                    </li>
+                }
+
+            </ul>
+        </li>
+    </ul>
+    <input type="hidden" id="inputhidden" value="@Model.Owner.Id" />
+    <div class="form-group mt-3">
+        <textarea class="form-control" rows="10" id="comment"></textarea>
+        <button class="btn btn-primary btn-md" id="send-answer" style="margin-top: 10px; float: right; "> Send</button>
+    </div>
+</div>
+@section footerJs {
+    <script>
+        $(document).ready(function () {
+            $("#send-answer").click(function () {
+                var ownerId = $("#inputhidden").val();
+                var content = $("#comment").val();
+                var senderId = localStorage.getItem("userId");
+
+                var form = new FormData();
+                form.append("Content", content);
+                form.append("OwnerId", ownerId);
+                form.append("SenderId", senderId);
+                axios.post("/Purchasing/AddQuestion", form).then(function (response) {
+                    $("#comment").val("");
+                    swal({ icon: 'success', title: "Send Successfully" });
+                    window.location.reload(false);
+                })
+
+            })
+        });
+    </script>
+
+}
+
+
+

@@ -1,0 +1,111 @@
+﻿@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+<div class="content-detail of-x" style="width:900px;margin-left:20%;">
+    <div class="col-xs-10">
+        <div style="background-image:url('/media/images/banner.jpg');width:900px;height:50px ;margin-bottom: 14px;background-repeat: no-repeat;" class="Std_Font_B">
+            <div style="position:relative;">
+                <p style="position:absolute;color:white;margin-left:30px;line-height: 50px; font-size:20pt"><b> Nguyên Tắc Đấu Thầu</b></p>
+                <p style="font-size:12px;right:16px;position:absolute;color:white;margin-right:50px;margin-bottom:30px;margin-top: 20px;">*Type Austenite</p>
+            </div>
+        </div>
+        <ul class="treeview-menu">
+            <li>
+                <p><b><i class="fa fa-arrow-right" aria-hidden="true"></i> Tất cả các hợp đồng là nguyên tắc xúc tiến cạnh tranh.</b></p>
+                <p>&#9;- Hủy bỏ hợp đồng và tìm kiếm các nhà cung cấp đủ điều kiện để đấu thầu</p>
+                <p><b><i class="fa fa-arrow-right" aria-hidden="true"></i> Đảm bảo tính minh bạch thông qua hệ thống mua sắm điện tử (e-Pro).</b></p>
+                <p>&#9;- Để đảm bảo công bằng và minh bạch, về nguyên tắc không được phép đấu thầu thủ công</p>
+                <p><b><i class="fa fa-arrow-right" aria-hidden="true"></i> Công bố cụ thể và rõ ràng các điều kiện và kết quả đấu thầu và giữ bí mật quá trình đàm phán.</b></p>
+                <p>
+                    &#9;- Thời hạn chấp nhận báo giá sơ bộ vượt quá 3 ngày, việc mua hàng của TCO phải thông báo trước, để loại bỏ Risk không công bằng.
+                </p>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+
+
+
+@section LeftMenu {
+    <ul class="menu-vertical" style="color:gray;margin-top:18.5px;">
+        <li class="mv-item border-menu" style="background-color:white;border-top:1px solid gray"><a href="recruitment.html" style="font-size: 11pt; font-weight:bold; font-family:Tahoma">▶&nbsp;&nbsp;<b>Recruitment</b></a></li>
+        <li class="mv-item border-menu" style="background-color:white;border-bottom:1px solid gray;border-top:1px solid gray"><a href="scrap-bidding.html" style="font-size: 11pt; font-weight:bold; font-family:Tahoma">▶&nbsp;&nbsp;<b>Scrap Bidding</b></a></li>
+        <li class="mv-item border-menu" style="background-color:white;border-top:1px solid gray;"><a href="javascript:accordionMenu()" style="font-size: 11pt;font-weight:bold">▶&nbsp;&nbsp;Purchasing</a></li>
+        <li class="active-sub">
+            <div class="acc">
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Tình hình mua vật tư&#10507;</b>
+                        <div class="acc__panel  styte-boder">
+                            <a href="vat-tu-chinh.html">▶ Vật Tư Chính</a>
+                        </div>
+                        <div class="acc__panel  styte-boder">
+                            <a href="vat-tu-thong-thuong.html">▶ Vật Tư Thông Thường</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Hướng Dẫn Tiêu Chuẩn&#10507;</b>
+
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="van-hanh-item-code.html">▶ Vận Hành Item Code</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="quan-ly-chuoi-cung-ung.html">▶ Quản Lý Chuỗi Cung Ứng</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="nguyen-tac-dau-thau.html">▶ Nguyên Tắc Đấu Thầu</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="dau-thau-dien-tu.html">▶ Đấu Thầu Điện Tử</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="giao-hang-va-thanh-toan.html">▶ Giao Hàng Và Thanh Toán</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="xu-ly-vat-tu-khong-dat.html">▶ Xử Lý Vật Tư Không Đạt</a>
+                    </div>
+
+                </div>
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Đăng Ký Nhà Cung Cấp&#10507;</b>
+
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="tinh-hinh-dang-ky.html">▶ Tình Hình Đăng Ký</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="cach-thuc-dang-ky.html">▶ Cách Thức Đăng Ký</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="bieu-mau-dang-ky.html">▶ Biểu Mẫu Đăng Ký</a>
+                    </div>
+
+                </div>
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Chuẩn Mực Đạo Đức &#10507;</b>
+
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="khai-niem.html">▶ Khái Niệm</a>
+                    </div>
+                    <div class="acc__panel styte-boder">
+                        <a href="tom-tat-tieu-chuan.html">▶ Tóm Tắt Tiêu Chuẩn</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </li>
+        <li class="mv-item border-menu styte-boder" style="background-color:white;border-bottom:1px solid gray"><a href="ethics.html" style="font-size: 11pt; font-weight:bold; font-family:Tahoma">▶&nbsp;&nbsp;<b>Ethics </b></a></li>
+    </ul>
+
+}

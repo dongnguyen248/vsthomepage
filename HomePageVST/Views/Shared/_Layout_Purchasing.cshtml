@@ -1,0 +1,102 @@
+﻿@*<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">*@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Posco VST Corp</title>
+    <link rel="icon" type="image/png" href="~/media/images/icon/P.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Tooplate" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/assets/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/assets/Scripts/sweetalert.min.js"></script>
+    <link href="~/Content/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/assets/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="~/assets/css/purchasing.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="sidebar">
+        <header>
+            <a href="#">Purchasing</a>
+        </header>
+        <div class="purchasing-lang__vn">
+            <ul class="nav">
+                <li>
+                    <a id="changeUrl" href="purchasing.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-view-dashboard"></i> Tình Hình Mua Vật Tư
+                    </a>
+                </li>
+                <li>
+                    <a href="huong-dan-tieu-chuan-mua-hang.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-link"></i> Hướng Dẫn Tiêu Chuẩn Mua Hàng VST
+                    </a>
+                </li>
+                <li>
+                    <a href="dang-ky-nha-cung-cap.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-widgets"></i> Đăng Ký Nhà Cung Cấp
+                    </a>
+                </li>
+                <li>
+                    <a href="chuan-muc-dao-duc.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-calendar"></i> Chuẩn Mực Đạo Đức Áp Dụng Cho Nhà Cung Cấp
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="purchasing-lang__kor">
+            <ul class="nav">
+                <li>
+                    <a id="changeUrl" href="purchasing.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-view-dashboard"></i> POSCO VST 구매자재 현황
+                    </a>
+                </li>
+                <li>
+                    <a href="huong-dan-tieu-chuan-mua-hang.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-link"></i>POSCO VST 구매기준 안내
+                    </a>
+                </li>
+                <li>
+                    <a href="dang-ky-nha-cung-cap.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-widgets"></i> 자재공급사 등록
+                    </a>
+                </li>
+                <li>
+                    <a href="chuan-muc-dao-duc.html">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                        <i class="zmdi zmdi-calendar"></i>    공급사윤리 기준
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="purchasing-lang">
+            <select class="selectpicker" id="select-lang" data-width="fit">
+                <option data-content='<span class="flag-icon flag-icon-vi"></span> Vietnamese' value="vn">Vietnamese</option>
+                <option data-content='<span class="flag-icon flag-icon-kor"></span> Korean' value="kor">Korean</option>
+            </select>
+        </div>
+    </div>
+    @RenderBody()
+    <script src="~/assets/Scripts/jquery-1.12.4.min.js"></script>
+    <script src="~/assets/Scripts/jquery-ui.js"></script>
+    <script src="~/assets/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/assets/Scripts/ajax/axios.min.js"></script>
+    <script src="~/assets/Scripts/moment.min.js"></script>
+    <script src="~/assets/Scripts/bootstrap3.min.js"></script>
+    <script src="~/assets/Scripts/bootstrap-select.min.js"></script>
+    <script src="~/assets/Scripts/jquery.validate.min.js"></script>
+    <script src="~/assets/Scripts/Purchasing.js"></script>
+    @RenderSection("footerJs", required: false)
+</body>
+</html>

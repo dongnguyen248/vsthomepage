@@ -1,0 +1,153 @@
+﻿@{ ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+
+<div class="content-detail of-x" style="width:900px;margin-left:20%;">
+    <div class="col-xs-10">
+        <div style="background-image:url('/media/images/banner.jpg');width:900px;height:50px ;margin-bottom: 14px;background-repeat: no-repeat;" class="Std_Font_B">
+            <div style="position:relative;">
+                <p style="position:absolute;color:white;margin-left:30px;line-height: 50px; font-size:20pt"><b>Quản lý chuỗi cung ứng (SRM)</b></p>
+                <p style="font-size:12px;right:16px;position:absolute;color:white;margin-right:50px;margin-bottom:30px;margin-top: 20px;">*Type Austenite</p>
+            </div>
+        </div>
+        <ul class="treeview-menu">
+            <li>
+                <p>
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i> <b>Duy trì quá trình tối ưu hóa chuỗi cung ứng thông qua khám phá nhà cung cấp, đánh giá quy trình thực hiện hợp đồng, quản lý sau, v.v.</b>
+                </p>
+                <h4 style="font-weight:bold;">
+                    [Hệ thống quản lý VST]
+                </h4>
+
+                <div style="border: 1px solid #0084ff;padding: 10px 5px 2px 5px;width: 590px; display:inline-block;">
+                    <p class="rectangle-style" style="display:inline-block">Nhà cung theo nhóm, nguồn</p>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                    <p class="rectangle-style" style="display:inline-block">
+                        Đánh giá thực tế giao hàng
+                    </p>
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                    <p class="rectangle-style" style=" display:inline-block">
+                        Quản lý hậu mãi ( về sau)
+                    </p>
+                    <div style="display:inline-block">
+                        <p><b> <i class="fa fa-check-circle-o" aria-hidden="true"></i> Luôn mua hệ điều <br /> hành hệ thống </b></p>
+                        <p>- Thiết kế, sản xuất,<br /> chất lượng,<br />đánh giá tại chỗ</p>
+                        <p>- Đăng ký trên 80 điểm</p>
+                    </div>
+                    <div style="display:inline-block">
+                        <p><b> <i class="fa fa-check-circle-o" aria-hidden="true"></i> Tiến hành đánh giá hàng quý <br /> và hàng năm </b></p>
+                        <p>
+                            - 6 dự án đánh giá,<br /> bao gồm chất lượng<br /> và
+                            giá cả
+                        </p>
+                        <p>- Thu thập dữ liệu từ ERP</p>
+                    </div>
+                    <div style="display:inline-block">
+                        <p><b> <i class="fa fa-check-circle-o" aria-hidden="true"></i> Đánh giá và phân tích hiệu <br /> suất phân phối   </b></p>
+
+                        <p>
+                            - Xuất sắc: Lựa chọn PHP,  <br />ưu đãi hợp  đồng
+                        </p>
+                        <p>- Xếp hạng: Giới hạn đấu thầu,  <br />hủy xếp hạng </p>
+                    </div>
+                </div>
+                <i class="arrow right"></i>
+                <div class="quan_ly_cung_ung">
+                    <p><b>Hoạt động của nhà cung cấp PHP</b></p>
+                    <p>
+                        <b>
+                            Lập kế hoạch vận hành PHP <br />
+                            <br />
+                            cho các nhà cung cấp có hiệu suất<br />
+                            giao hàng tốt
+                        </b>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+@section LeftMenu {
+    <ul class="menu-vertical" style="color:gray;margin-top:18.5px;">
+        <li class="mv-item border-menu" style="background-color:white;border-top:1px solid gray"><a href="recruitment.html" style="font-size: 11pt; font-weight:bold; font-family:Tahoma">▶&nbsp;&nbsp;<b>Recruitment</b></a></li>
+        <li class="mv-item border-menu" style="background-color:white;border-bottom:1px solid gray;border-top:1px solid gray"><a href="scrap-bidding.html" style="font-size: 11pt; font-weight:bold; font-family:Tahoma">▶&nbsp;&nbsp;<b>Scrap Bidding</b></a></li>
+        <li class="mv-item border-menu" style="background-color:white;border-top:1px solid gray;"><a href="javascript:accordionMenu()" style="font-size: 11pt;font-weight:bold">▶&nbsp;&nbsp;Purchasing</a></li>
+        <li class="active-sub">
+            <div class="acc">
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Tình hình mua vật tư&#10507;</b>
+
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="vat-tu-chinh.html">▶ Vật Tư Chính</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="vat-tu-thong-thuong.html">▶ Vật Tư Thông Thường</a>
+                    </div>
+                </div>
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Hướng Dẫn Tiêu Chuẩn&#10507;</b>
+
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="van-hanh-item-code.html">▶ Vận Hành Item Code</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="quan-ly-chuoi-cung-ung.html">▶ Quản Lý Chuỗi Cung Ứng</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="nguyen-tac-dau-thau.html">▶ Nguyên Tắc Đấu Thầu</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="dau-thau-dien-tu.html">▶ Đấu Thầu Điện Tử</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="giao-hang-va-thanh-toan.html">▶ Giao Hàng Và Thanh Toán</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="xu-ly-vat-tu-khong-dat.html">▶ Xử Lý Vật Tư Không Đạt</a>
+                    </div>
+
+                </div>
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Đăng Ký Nhà Cung Cấp&#10507;</b>
+
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="tinh-hinh-dang-ky.html">▶ Tình Hình Đăng Ký</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="cach-thuc-dang-ky.html">▶ Cách Thức Đăng Ký</a>
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="bieu-mau-dang-ky.html">▶ Biểu Mẫu Đăng Ký</a>
+                    </div>
+
+                </div>
+                <div class="acc__card styte-boder">
+                    <div class="acc__title">
+                        <b>Chuẩn Mực Đạo Đức &#10507;</b>
+
+                    </div>
+                    <div class="acc__panel  styte-boder">
+                        <a href="khai-niem.html">▶ Khái Niệm</a>
+                    </div>
+                    <div class="acc__panel styte-boder">
+                        <a href="tom-tat-tieu-chuan.html">▶ Tóm Tắt Tiêu Chuẩn</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </li>
+        <li class="mv-item border-menu styte-boder" style="background-color:white;border-bottom:1px solid gray"><a href="ethics.html" style="font-size: 11pt; font-weight:bold; font-family:Tahoma">▶&nbsp;&nbsp;<b>Ethics </b></a></li>
+    </ul>
+
+}

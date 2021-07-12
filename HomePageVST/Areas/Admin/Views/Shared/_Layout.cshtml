@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Posco VST Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="~/media/images/icon/P.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/metisMenu.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/slicknav.min.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/typography.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/default-css.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/styles.css" />
+    <link rel="stylesheet" href="~/Areas/Admin/assets/css/responsive.css" />
+    <link rel="stylesheet" href="~/Content/jquery-ui-1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="~/Content/DataTables/css/jquery.dataTables.min.css" />
+    <script src="~/Areas/Admin/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    @RenderSection("headerCss", required: false)
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="page-container">
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="/home.html"><img src="~/media/images/poscovstlogo-white.png" alt="logo" /></a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+                    <nav>
+                        <ul class="metismenu" id="menu">
+                            <li id="recruitment-mn"><a href="/admin/recruitment"><span>Recruitment</span></a></li>
+                            <li id="ssg-mn"><a href="/admin/StanlessSteelGuidebook"><span>Stainless Steel Guidebook</span></a></li>
+                            <li id="corrosion-mn"><a href="/admin/Corrosion"><span>Corrosion</span></a></li>
+                            <li id="welding-mn"><a href="/admin/Welding"><span>Welding</span></a></li>
+                            <li id="forming-mn"><a href="/admin/Forming"><span>Forming</span></a></li>
+                            <li id="wti-mn"><a href="/admin/WaterTankIndustry"><span>Water tank industry</span></a></li>
+                            <li id="445nf-mn"><a href="/admin/About445NF"><span>445NF</span></a></li>
+                            <li id="news-mn"><a href="/admin/NewsInfomation"><span>News & Infomation</span></a></li>
+                            <li id="coporate-mn"><a href="/admin/CoporateCitizen"><span>Coporate Citizen</span></a></li>
+                            <li id="customer-mn"><a href="/admin/Customer"><span>Customer</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="main-content" style="min-height: 865px;">
+            <div class="header-area">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-sm-8 clearfix">
+                        <div class="nav-btn pull-left">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-title-area">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="breadcrumbs-area clearfix">
+                            @RenderSection("ShortPath", required: false)
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix">
+                        <div class="user-profile pull-right">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown" aria-expanded="false">@User.Identity.Name <i class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(45px, 45px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a class="dropdown-item" href="/admin/userlogin/createuser">Create User</a>
+                                }
+                                <a class="dropdown-item" href="/admin/userlogin/changepassword">Change password</a>
+                                <a class="dropdown-item" href="/admin/userlogin/logout">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content-inner">
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="market-status-table">
+                                    <div class="table-responsive">
+                                        @RenderBody()
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-area">
+                <p>Copyright &copy; 2020 POSCO VST</p>
+            </div>
+        </footer>
+    </div>
+    <script src="~/Areas/Admin/assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="~/Areas/Admin/assets/js/popper.min.js"></script>
+    <script src="~/Areas/Admin/assets/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/assets/js/owl.carousel.min.js"></script>
+    <script src="~/Areas/Admin/assets/js/metisMenu.min.js"></script>
+    <script src="~/Areas/Admin/assets/js/jquery.slimscroll.min.js"></script>
+    <script src="~/Areas/Admin/assets/js/jquery.slicknav.min.js"></script>
+    <script src="~/Areas/Admin/assets/js/plugins.js"></script>
+    <script src="~/Areas/Admin/assets/js/scripts.js"></script>
+    <script src="~/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="~/Content/DataTables/js/jquery.dataTables.min.js"></script>
+    @RenderSection("footerJs", required: false)
+    <script>
+        $(".table").DataTable();
+        $("#@ViewBag.Active-mn").addClass("active");
+    </script>
+</body>
+</html>

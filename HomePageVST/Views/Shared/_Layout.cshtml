@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Posco VST Corp</title>
+    <link rel="icon" type="image/png" href="~/media/images/icon/P.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Tooplate" />
+
+    @Styles.Render("~/css/base")
+    @Styles.Render("~/css/customs")
+    <link rel="preload" as="font" type="font/woff" crossorigin=crossorigin href="~/Content/bootstrap-3.2.0/fonts/glyphicons-halflings-regular.woff" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin=crossorigin href="~/assets/fonts/fontawesome-webfont.woff2" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    @*<script src="https://code.jquery.com/jquery-1.12.4.js" defer></script>*@
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js" defer></script>
+    @RenderSection("headerCss", required: false)
+</head>
+<body id="top" data-spy="scroll" data-offset="50">
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div id="page-wrap" class="layout">
+        @{Html.RenderAction("Header", "Home");}
+        <div id="content-wrap" style="width:1350px;margin:auto;">
+            <div style="float:left;" id="left-menu">
+                @RenderSection("LeftMenu", required: true)
+            </div>
+            @RenderBody()
+        </div>
+    </div>
+
+    @{Html.RenderPartial("CustomerLogin");}
+
+    @{Html.RenderAction("Footer", "Home");}
+
+    @{Html.RenderPartial("FacebookMessenger");}
+
+    @Scripts.Render("~/js/plugins")
+    @Scripts.Render("~/js/customs")
+    @RenderSection("footerJs", required: false)
+
+</body>
+</html>

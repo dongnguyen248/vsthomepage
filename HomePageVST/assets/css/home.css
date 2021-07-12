@@ -1,0 +1,173 @@
+﻿.footer-thumb p {
+    margin: 0 0 5px;
+}
+
+#sub-slide h4 {
+    color: #828282;
+    font-size: 18px;
+}
+
+#sub-slide div {
+    margin-top: 10px !important;
+}
+
+div.vid {
+    padding: 0px 5px 5px;
+}
+
+video.video-js {
+    border: .5px solid;
+    border-radius: 3px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 170px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@media screen and (max-device-width: 1024px) and (orientation: portrait) {
+    #video-frame .col-centered .vid,
+    #video-frame .col-centered .vid + .vid + .vid {
+        display: block;
+    }
+
+        #video-frame .col-centered .vid + .vid {
+            display: none;
+        }
+
+    .video-js {
+        height: 260px !important;
+    }
+}
+
+.title-footer {
+    font-weight: bold;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.carousel-control {
+    width: 0px;
+}
+
+    .carousel-control.left,
+    .carousel-control.right {
+        margin-right: 40px;
+        margin-left: 32px;
+        background-image: none;
+        opacity: 1;
+    }
+
+    .carousel-control > a > span {
+        color: white;
+        font-size: 29px !important;
+    }
+
+.carousel-col {
+    position: relative;
+    min-height: 1px;
+    padding: 5px;
+    float: left;
+}
+
+.active > div {
+    display: none;
+}
+
+    .active > div:first-child {
+        display: block;
+    }
+
+.carousel-inner .active.left {
+    left: -25%;
+}
+
+.carousel-inner .active.right {
+    left: 25%;
+}
+
+.carousel-inner .next {
+    left: 25%;
+}
+
+.carousel-inner .prev {
+    left: -25%;
+}
+
+.carousel-col {
+    width: 25%;
+}
+
+.active > div:first-child + div {
+    display: block;
+}
+
+    .active > div:first-child + div + div {
+        display: block;
+    }
+
+        .active > div:first-child + div + div + div {
+            display: block;
+        }
+
+.img-responsive {
+    width: 100% !important;
+    height: 150px !important;
+}
+
+@media screen and (max-device-width: 1024px) and (orientation: portrait) {
+    .carousel-inner .active.left {
+        left: -33.3%;
+    }
+
+    .carousel-inner .active.right {
+        left: 33.3%;
+    }
+
+    .carousel-inner .next {
+        left: 33.3%;
+    }
+
+    .carousel-inner .prev {
+        left: -33.3%;
+    }
+
+    .carousel-col {
+        width: 33.3%;
+    }
+
+    .active > div:first-child + div {
+        display: block;
+    }
+
+        .active > div:first-child + div + div {
+            display: block;
+        }
+
+            .active > div:first-child + div + div + div {
+                display: none;
+            }
+
+    .active + div > div:first-child + div + div + div {
+        display: none;
+    }
+
+    .img-responsive {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .glyphicon.glyphicon-chevron-left,
+    .glyphicon.glyphicon-chevron-right {
+        margin-top: -45px;
+    }
+}
+
+.block {
+    width: 306px;
+    height: 830px;
+}

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DTO.ImageDTO>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h4>@Html.ActionLink("Create New", "Create")</h4>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DatePosted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                Images
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DatePosted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    <img class="img-responsive" style="height:150px; width:250px" src="@item.MinimalFilePath" />
+                </td>
+                <td>
+                    <ul class="d-flex justify-content-center">
+                        <li class="mr-3"><a href="/Admin/CoporateCitizen/Edit/@item.Id" class="text-secondary"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="/Admin/CoporateCitizen/Delete/@item.Id" class="text-danger"><i class="ti-trash"></i></a></li>
+                    </ul>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section ShortPath {
+    <ul class="breadcrumbs pull-left">
+        <li><span>Coporate Citizen</span></li>
+    </ul>
+}

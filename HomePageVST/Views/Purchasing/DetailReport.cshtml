@@ -1,0 +1,125 @@
+﻿@model DTO.SupplierReportDTO
+
+@{
+    ViewBag.Title = "DetailReport";
+    Layout = "~/Views/Shared/_Layout_Purchasing.cshtml";
+}
+
+<h2>DetailReport</h2>
+
+<div class="container">
+    <ul>
+        <li class="treeview">
+            <h3 class="swrap_one">
+                Supplier Detail
+            </h3>
+            <ul class="treeview-menu">
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        Full Name :
+                    </h4>
+                    <span>  @Html.DisplayFor(model => model.Name)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-mobile" aria-hidden="true"></i>
+                        Phone Number :
+                    </h4>
+                    <span>  @Html.DisplayFor(model => model.PhoneNumber)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                        Email :
+                    </h4>
+                    <span>    @Html.DisplayFor(model => model.Email)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        Title Report :
+                    </h4>
+                    <span>   @Html.DisplayFor(model => model.TitleReport)</span>
+
+                </li>
+                <li>
+                    <h4 class="swrap_two">
+                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                        Content Report :
+                    </h4>
+                    <span>   @Html.DisplayFor(model => model.ContentReport)</span>
+
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+@*<h4>Detail Report</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.SecretCode)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SecretCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TitleReport)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TitleReport)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContentReport)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ContentReport)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
